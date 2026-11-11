@@ -1,0 +1,25 @@
+[package]
+name = "shieldcraft"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85.0"
+authors = ["Kreive Tech <contact@kreive.com.br>"]
+license = "MIT"
+description = "Defensive AI security, SQL query audit, data privacy masking, and sandbox guard for Rust."
+repository = "https://github.com/kreivetech/shieldcraft"
+homepage = "https://kreive.com.br"
+readme = "README.md"
+keywords = ["security", "sql", "masking", "privacy", "guard"]
+categories = ["development-tools", "parser-implementations"]
+
+[dependencies]
+regex = "1.11"
+catfive = { version = "0.2.0", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+tokio = { version = "1.40", features = ["process", "time", "macros", "sync"] }
+
+[dev-dependencies]
+tempfile = "3.17"
+tokio = { version = "1.40", features = ["rt", "rt-multi-thread", "macros"] }
